@@ -15,8 +15,6 @@ app.use(function(req, res, next) {
 
 
 app.get('/', (req, res) => {
-
-    console.log("URL", process.env.URL_TO_PROXY)
     axios.get(process.env.URL_TO_PROXY, {
             headers: {
                 ...(process.env.AUTHORIZATION_HEADER ? {Authorization: req.get('Authorization')} : {})
