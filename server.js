@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
         } )
 })
 if (process.env.NODE_ENV !== 'production') {
-    app.listen(8080, () => console.log('Proxy server running on port 1234!'));
+    app.listen(1234, () => console.log(`Proxy server running on port ${process.env.PORT}!`));
 } else {
     app.listen(process.env.PORT, () => console.log(`Proxy server running on port ${process.env.PORT}!`));
 
